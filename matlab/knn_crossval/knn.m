@@ -28,6 +28,8 @@ function knn()
 %% Exercise (synthetic dataset generation)
 %
 function ex3pre()
+    % . Generation of 70, 50 points for 2 classes with means [0 0] and [1 1] and
+    % covariance matrices [0.3 0; 0 .5]
     sigma = [.3 0; 0 .5];
     D1 = gauss([70 50],[0 0; 1 1],cat(3,sigma,sigma));
     D1.data = D1.data + .25*randn(120,2);
